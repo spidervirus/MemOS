@@ -1,0 +1,20 @@
+Q3 Product Strategy Meeting
+
+Date: September 15th, 2023
+Attendees: Alice (Product), Bob (Engineering), Charlie (Design)
+
+Agenda:
+1. Review Q2 metrics.
+2. Discuss Q3 roadmap priorities.
+3. Resource allocation.
+
+Notes:
+- Q2 saw a 15% increase in user retention, largely attributed to the new onboarding flow.
+- For Q3, the primary focus will be on the new "Local Sync" feature. Users have been requesting offline capabilities heavily.
+- Engineering raised concerns about the timeline for Local Sync. We agreed to limit the initial scope to text documents only (no images or attachments) for the MVP.
+- Design will start wireframing the offline status indicators by next Tuesday.
+
+Action Items:
+- [ ] Alice: Finalize MVP requirements for Local Sync.
+- [ ] Bob: Investigate local database options (SQLite vs. pure Rust alternatives).
+- [ ] Charlie: Share initial wireframes.

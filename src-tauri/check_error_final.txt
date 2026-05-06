@@ -1,0 +1,36 @@
+    Checking lance v0.14.1
+   Compiling memos v0.1.0 (/Users/aman/Documents/MemOS/src-tauri)
+error: failed to run custom build command for `memos v0.1.0 (/Users/aman/Documents/MemOS/src-tauri)`
+
+Caused by:
+  process didn't exit successfully: `/Users/aman/Documents/MemOS/src-tauri/target/debug/build/memos-985b586b877fde22/build-script-build` (exit status: 1)
+  --- stdout
+  cargo:rerun-if-env-changed=TAURI_CONFIG
+  cargo:rustc-check-cfg=cfg(desktop)
+  cargo:rustc-cfg=desktop
+  cargo:rustc-check-cfg=cfg(mobile)
+  cargo:rerun-if-changed=/Users/aman/Documents/MemOS/src-tauri/tauri.conf.json
+  cargo:rustc-env=TAURI_ANDROID_PACKAGE_NAME_APP_NAME=solo
+  cargo:rustc-env=TAURI_ANDROID_PACKAGE_NAME_PREFIX=com_memos
+  cargo:rustc-check-cfg=cfg(dev)
+  cargo:rustc-cfg=dev
+  cargo:rerun-if-changed=permissions
+  cargo:PERMISSION_FILES_PATH=/Users/aman/Documents/MemOS/src-tauri/target/debug/build/memos-51e81d4a7b1d11d9/out/app-manifest/__app__-permission-files
+  failed to parse TOML: TOML parse error at line 5, column 5
+    |
+  5 |     "start_indexing",
+    |     ^^^^^^^^^^^^^^^^
+  invalid type: string "start_indexing", expected a sequence
+  : TOML parse error at line 5, column 5
+    |
+  5 |     "start_indexing",
+    |     ^^^^^^^^^^^^^^^^
+  invalid type: string "start_indexing", expected a sequence
+
+warning: build failed, waiting for other jobs to finish...
+error: queries overflow the depth limit!
+  |
+  = help: consider increasing the recursion limit by adding a `#![recursion_limit = "256"]` attribute to your crate (`lance`)
+  = note: query depth increased by 130 when computing layout of `{async block@/Users/aman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lance-0.14.1/src/index.rs:159:5: 159:28}`
+
+error: could not compile `lance` (lib) due to 1 previous error
