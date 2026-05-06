@@ -16,6 +16,8 @@ You have hundreds of notes, PDFs, and markdown files. You remember reading somet
 - **Privacy First:** All data is stored locally in a high-performance vector store. No data ever leaves your machine.
 - **Multiple File Types:** Supports Markdown (`.md`), plain text (`.txt`), and PDFs (`.pdf`).
 - **Blazing Fast:** Built with Rust and Tauri for native desktop performance.
+- **Zero Friction:** No external dependencies like `protoc` or complex database setups required for building or running.
+- **Efficient:** Uses a quantized ONNX model to keep the application footprint small (~22MB model).
 
 ## How It Works
 
@@ -40,12 +42,12 @@ graph TD
 
 ## Why MemOS?
 
-| Tool | Semantic Search | Local-Only | Open Source | Works with PDFs |
-| :--- | :---: | :---: | :---: | :---: |
-| macOS Spotlight | ❌ keyword | ✅ | ❌ | ✅ |
-| DocFetcher | ❌ keyword | ✅ | ✅ (Eclipse) | ✅ |
-| Rewind AI | ✅ | ❌ cloud | ❌ | ❌ |
-| **MemOS** | **✅** | **✅** | **✅ (MIT)** | **✅** |
+| Tool | Semantic Search | Local-Only | Open Source | No Build Bloat | Works with PDFs |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| macOS Spotlight | ❌ keyword | ✅ | ❌ | ✅ | ✅ |
+| DocFetcher | ❌ keyword | ✅ | ✅ (Eclipse) | ❌ | ✅ |
+| Rewind AI | ✅ | ❌ cloud | ❌ | ❌ | ❌ |
+| **MemOS** | **✅** | **✅** | **✅ (MIT)** | **✅** | **✅** |
 
 ## Installation
 

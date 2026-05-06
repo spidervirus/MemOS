@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [macos-latest, windows-latest]
+        platform: [macos-latest, windows-latest, ubuntu-22.04]
 
     runs-on: ${{ matrix.platform }}
     steps:
@@ -25,7 +25,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: install dependencies (ubuntu only)
-        if: matrix.platform == 'ubuntu-20.04'
+        if: matrix.platform == 'ubuntu-22.04'
         run: |
           sudo apt-get update
           sudo apt-get install -y libwebkit2gtk-4.0-dev libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
@@ -45,8 +45,8 @@ jobs:
           APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
         with:
-          tagName: app-v__VERSION__
-          releaseName: "MemOS v__VERSION__"
-          releaseBody: "See the assets to download this version and install."
+          tagName: ${{ github.ref_name }}
+          releaseName: "MemOS ${{ github.ref_name }}"
+          releaseBody: "MemOS Solo Release. Built for privacy, performance, and simplicity."
           releaseDraft: true
           prerelease: false

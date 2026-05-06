@@ -12,8 +12,8 @@ fn main() {
     }
 
     if !model_path.exists() {
-        println!("cargo:warning=Downloading embedding model... this might take a minute.");
-        let url = "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/onnx/model.onnx";
+        println!("cargo:warning=Downloading quantized embedding model... (~22MB)");
+        let url = "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/main/onnx/model_quantized.onnx";
         let mut response = reqwest::blocking::get(url).expect("Failed to download model");
         let mut dest = fs::File::create(&model_path).expect("Failed to create model file");
         copy(&mut response, &mut dest).expect("Failed to copy model content");
