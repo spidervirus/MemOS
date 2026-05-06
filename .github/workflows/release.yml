@@ -10,9 +10,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [macos-latest, windows-latest, ubuntu-22.04]
+        include:
+          - platform: macos-latest
+            args: ""
+          - platform: windows-latest
+            args: ""
+            # Fix for Windows LNK2038 RuntimeLibrary mismatch
+            rustflags: "-C target-feature=+crt-static"
+          - platform: ubuntu-latest
+            args: ""
 
     runs-on: ${{ matrix.platform }}
+    env:
+      RUSTFLAGS: ${{ matrix.rustflags || '' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -37,7 +47,7 @@ jobs:
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # For macOS notarization (if configured in repo secrets)
+          # Only pass Apple secrets if they exist to avoid keychain import errors
           APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
           APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
           APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
