@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { invoke } from "@tauri-apps/api/core";
-import { Search, FolderOpen, Database, Brain, Loader2 } from "lucide-react";
+import { Database, Brain, Loader2 } from "lucide-react";
 import SearchBar from "./components/SearchBar";
 import ResultsList from "./components/ResultsList";
 import StatusBar from "./components/StatusBar";
@@ -10,7 +10,7 @@ export interface SearchResult {
   id: string;
   content: string;
   source: string;
-  score: f32;
+  score: number;
 }
 
 function App() {

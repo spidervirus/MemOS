@@ -7,7 +7,7 @@ MemOS is a local-first, privacy-centric "second brain" that indexes and semantic
 ## Getting Started
 
 1. **Fork the repository** on GitHub.
-2. **Clone your fork** locally: `git clone https://github.com/your-username/memos.git`
+2. **Clone your fork** locally: `git clone https://github.com/spidervirus/MemOS.git`
 3. **Install dependencies**: 
    - Node.js & npm (for the frontend)
    - Rust & Cargo (for the backend)

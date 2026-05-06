@@ -16,18 +16,18 @@ No clouds. No subscriptions. Just your knowledge, instantly accessible.
 ## Installation
 
 ### Windows
-1. Go to the [Releases](https://github.com/your-username/memos/releases) page.
+1. Go to the [Releases](https://github.com/spidervirus/memos/releases) page.
 2. Download the `.msi` or `.exe` installer for the latest version.
 3. Run the installer.
 
 ### macOS (Apple Silicon & Intel)
-1. Go to the [Releases](https://github.com/your-username/memos/releases) page.
+1. Go to the [Releases](https://github.com/spidervirus/memos/releases) page.
 2. Download the `.dmg` file for the latest version.
 3. Open the `.dmg` and drag the MemOS app to your Applications folder.
 *(Note: Releases are notarized by Apple)*
 
 ### Linux
-1. Go to the [Releases](https://github.com/your-username/memos/releases) page.
+1. Go to the [Releases](https://github.com/spidervirus/memos/releases) page.
 2. Download the `.AppImage` or `.deb` file.
 3. If using the AppImage, make it executable (`chmod +x MemOS-*.AppImage`) and run it.
 
@@ -48,7 +48,7 @@ Want to build MemOS from source or contribute?
 
 ### Setup
 ```bash
-git clone https://github.com/your-username/memos.git
+git clone https://github.com/spidervirus/memos.git
 cd memos
 npm install
 npm run tauri dev
